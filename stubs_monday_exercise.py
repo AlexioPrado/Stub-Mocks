@@ -43,13 +43,13 @@ def get_store_status(current_time=None):
 
 def test_store_open():
     open_time = datetime(2025, 1, 1, 9, 0, 0)
-    result = get_store_stat(current_time = open_time)
+    result = get_store_status(current_time = open_time)
     assert "open" in result
 
 
 def test_store_closed():
     close_time = datetime(2025, 1, 1, 23, 0, 0)
-    result = get_store_stat(current_time = close_time)
+    result = get_store_status(current_time = close_time)
     assert "closed" in result
 
 
